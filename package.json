@@ -5,7 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "express": "^4.17.1",
-    "jade": "^1.11.0"
+    "jade": "^1.11.0",
+    "less": "^3.10.3",
+    "less-watch-compiler": "^1.14.1"
   },
   "devDependencies": {},
   "scripts": {
