@@ -6,3 +6,6 @@ node_modules
 
 # Ignore mockups folder
 mockups
+
+# Ignore package-lock
+package-lock.json
