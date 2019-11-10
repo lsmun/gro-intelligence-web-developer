@@ -4,15 +4,8 @@
   font-weight: 500;
   src: local('Roboto Medium'), local('Roboto-Medium'), url(http://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fBBc9.ttf) format('truetype');
 }
-.nav {
-  align-items: center;
-}
 .nav .nav-item {
   padding: 15px;
-}
-.nav .nav-item .nav-link {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
   /*.btn-outline {
                 color: #f8f9fa;
             }
@@ -22,8 +15,26 @@
                 background-color: #f8f9fa;
             }*/
 }
-.nav .nav-item .nav-link .btn {
+.nav-link {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+.nav-link .btn {
   border-radius: 20px;
   padding-left: 30px;
   padding-right: 30px;
+}
+body {
+  background-color: darkslategray;
+}
+.dropdown {
+  position: static;
+}
+.dropdown-menu {
+  border: none;
+  border-radius: 0;
+  width: 100%;
+}
+.navbar {
+  padding: 0;
 }

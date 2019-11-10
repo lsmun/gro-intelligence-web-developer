@@ -11,32 +11,101 @@ html(lang="en")
         link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet")
         link(href="/styles/main.css" rel="stylesheet")
     body
+        <!-- Navbar -->
         nav(class="navbar navbar-expand-lg navbar-dark bg-dark")
             div(class="container")
+
+                <!-- Navbar brand -->
                 a(class="navbar-brand" href="/")
                     img(src="images/logo.png" width="50" height="50" alt="Gro Intelligence logo")
-                button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation")
+                
+                <!-- Collapse button -->
+                button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation")
                     span(class="navbar-toggler-icon")
             
-                div(class="collapse navbar-collapse" id="navbarNavDropdown")
+                <!-- Collapsible content -->
+                div(class="collapse navbar-collapse" id="navbarCollapse")
+
+                     <!-- Links -->
                     ul(class="nav navbar-nav ml-auto")
-                        li(class="nav-item")
-                            a(class="nav-link" href="#") Products
-                        li(class="nav-item")
-                            a(class="nav-link" href="#") Industries
+
+                        <!-- Products -->
+                        li(class="nav-item dropdown")
+                            a(href="#" class="nav-link" id="productDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Products
+                            div(class="dropdown-menu v-2 z-depth-1 special-color py-5 px-3" aria-labelledby="productDropdown")
+                                div(class="container")    
+                                    div(class="row")
+
+                                        <!-- Gro web app -->    
+                                        div(class="col-md-3 text-center")
+                                            img(src="/images/products/gro-web-app.png" class="img-fluid")
+                                            h4 Gro web app
+                                            p Jump straight into analysis through intuitive visualizations that can be monitored on live dashboards
+                                            a(href="#")
+                                                button(type="button" class="btn btn-outline-dark btn-outline") Learn more 
+                                                    span(class="icon-chevron-right1")
+
+                                        <!-- Gro analytics -->
+                                        div(class="col-md-3 text-center")
+                                            img(src="/images/products/gro-analytics.png" class="img-fluid")
+                                            h4 Gro analytics
+                                            p Gain a competitive edge by using Gro’s proprietary machine-learning algorithms and predictive models
+                                            p
+                                                span(class="font-weight-bold") US Corn 
+                                                a(href="#") Yield Forecast 
+                                                    span(class="icon-chevron-right1")
+                                            p
+                                                span(class="font-weight-bold") US Soy 
+                                                a(href="#") Yield Forecast 
+                                                    span(class="icon-chevron-right1")
+                                            p
+                                                span(class="font-weight-bold") Argentina Soy 
+                                                a(href="#") Yield Forecast 
+                                                    span(class="icon-chevron-right1")
+                                            a(href="#")
+                                                button(type="button" class="btn btn-outline-dark btn-outline") Learn more 
+                                                    span(class="icon-chevron-right1")
+
+                                        <!-- Gro API -->
+                                        div(class="col-md-3 text-center")
+                                            img(src="/images/products/gro-api.jpg" class="img-fluid")
+                                            h4 Gro API
+                                            p Gain direct access to Gro’s entire database, including supply, demand, weather, and environment data
+                                            a(href="#")
+                                                button(type="button" class="btn btn-outline-dark btn-outline") Learn more 
+                                                    span(class="icon-chevron-right1")
+
+                                        <!-- Gro dictionary -->
+                                        div(class="col-md-3 text-center")
+                                            img(src="/images/products/gro-dictionary.png" class="img-fluid")
+                                            h4 Gro dictionary
+                                            p Explore data from our collection of over 8.828M datasets.
+                                            a(href="#")
+                                                button(type="button" class="btn btn-outline-dark btn-outline") Learn more 
+                                                    span(class="icon-chevron-right1")
+                            
+                        <!-- Industries -->
+                        li(class="nav-item dropdown")
+                            a(href="#" class="nav-link" id="industriesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Industries
+                            div(class="dropdown-menu v-2 z-depth-1 special-color py-5 px-3" aria-labelledby="industriesDropdown")
+                                div(class="container")    
+                                    div(class="row")
+
+                        <!-- Research -->
                         li(class="nav-item")
                             a(class="nav-link" href="#") Research
                         li(class="nav-item")
                             a(class="nav-link" href="#") About
-                        li(class="nav-item")
-                            a(class="nav-link" href="#")
-                                button(type="button" class="btn btn-outline-light btn-outline") Log in
-                        li(class="nav-item")
-                            a(class="nav-link" href="#")
-                                button(type="button" class="btn btn-secondary btn-filled") Sign up
+                    
+                    a(class="nav-link" href="#")
+                        button(type="button" class="btn btn-outline-light btn-outline") Log in
+                   
+                    a(class="nav-link" href="#")
+                        button(type="button" class="btn btn-secondary btn-filled") Sign up
         
         div(class="container")
             block content
 
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
         script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")
+        script(src="/js/main.js")
