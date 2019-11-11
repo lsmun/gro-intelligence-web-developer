@@ -12,55 +12,55 @@ html(lang="en")
         link(href="/styles/main.css" rel="stylesheet")
     body
         <!-- Navbar -->
-        nav(class="navbar navbar-expand-lg navbar-dark bg-dark")
+        nav(class="navbar navbar-expand-lg")
             div(class="container")
 
                 <!-- Navbar brand -->
                 a(class="navbar-brand" href="/")
-                    img(src="images/logo.png" width="50" height="50" alt="Gro Intelligence logo")
+                    img(src="images/logo.png" alt="Gro Intelligence logo")
                 
                 <!-- Collapse button -->
-                button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation")
+                button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation")
                     span(class="navbar-toggler-icon")
             
                 <!-- Collapsible content -->
-                div(class="collapse navbar-collapse" id="navbarCollapse")
+                div(class="collapse navbar-collapse" id="navbar")
 
                     <!-- Links -->
                     ul(class="nav navbar-nav ml-auto")
 
                         <!-- Products -->
                         li(class="nav-item dropdown")
-                            a(href="#" class="nav-link" id="productDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Product
-                            div(class="dropdown-menu v-2 z-depth-1 special-color py-5 px-3" aria-labelledby="productDropdown")
+                            a(href="#" class="nav-link" id="productsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Products
+                            div(class="dropdown-menu" id="productsMenu" aria-labelledby="productsDropdown")
                                 div(class="container")    
                                     div(class="row")
 
                                         <!-- Gro web app -->    
-                                        div(class="col-md-3 text-center")
+                                        div(class="col-md-3 text-center product-card")
                                             img(src="/images/products/gro-web-app.png" class="img-fluid")
-                                            h4 Gro web app
+                                            h3 Gro web app
                                             p Jump straight into analysis through intuitive visualizations that can be monitored on live dashboards
                                             a(href="#")
                                                 button(type="button" class="btn btn-outline-dark btn-outline") Learn more 
                                                     span(class="icon-chevron-right1")
 
                                         <!-- Gro analytics -->
-                                        div(class="col-md-3 text-center")
+                                        div(class="col-md-3 text-center product-card")
                                             img(src="/images/products/gro-analytics.png" class="img-fluid")
-                                            h4 Gro analytics
+                                            h3 Gro analytics
                                             p Gain a competitive edge by using Gro’s proprietary machine-learning algorithms and predictive models
                                             ul(class="list-unstyled")
                                                 li
-                                                    span(class="font-weight-bold") US Corn 
+                                                    span US Corn 
                                                     a(href="#") Yield Forecast 
                                                         span(class="icon-chevron-right1")
                                                 li
-                                                    span(class="font-weight-bold") US Soy 
+                                                    span US Soy 
                                                     a(href="#") Yield Forecast 
                                                         span(class="icon-chevron-right1")
                                                 li
-                                                    span(class="font-weight-bold") Argentina Soy 
+                                                    span Argentina Soy 
                                                     a(href="#") Yield Forecast 
                                                         span(class="icon-chevron-right1")
                                             a(href="#")
@@ -68,18 +68,18 @@ html(lang="en")
                                                     span(class="icon-chevron-right1")
 
                                         <!-- Gro API -->
-                                        div(class="col-md-3 text-center")
+                                        div(class="col-md-3 text-center product-card")
                                             img(src="/images/products/gro-api.jpg" class="img-fluid")
-                                            h4 Gro API
+                                            h3 Gro API
                                             p Gain direct access to Gro’s entire database, including supply, demand, weather, and environment data
                                             a(href="#")
                                                 button(type="button" class="btn btn-outline-dark btn-outline") Learn more 
                                                     span(class="icon-chevron-right1")
 
                                         <!-- Gro dictionary -->
-                                        div(class="col-md-3 text-center")
+                                        div(class="col-md-3 text-center product-card")
                                             img(src="/images/products/gro-dictionary.png" class="img-fluid")
-                                            h4 Gro dictionary
+                                            h3 Gro dictionary
                                             p Explore data from our collection of over 8.828M datasets.
                                             a(href="#")
                                                 button(type="button" class="btn btn-outline-dark btn-outline") Learn more 
@@ -88,21 +88,25 @@ html(lang="en")
                         <!-- Industries -->
                         li(class="nav-item dropdown")
                             a(href="#" class="nav-link" id="industriesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Industries
-                            div(class="dropdown-menu v-2 z-depth-1 special-color py-5 px-3" aria-labelledby="industriesDropdown")
+                            div(class="dropdown-menu" id="industriesMenu" aria-labelledby="industriesDropdown")
                                 div(class="container")    
                                     div(class="row")
-                                        div(class="col-md-3 text-center")
+                                        div(class="col-md-3 text-center industry-card")
                                             div(class="img-hover-zoom")
                                                 img(src="/images/industries/financial-services.jpg" class="img-fluid")
-                                        div(class="col-md-3 text-center")
+                                                span(class="text-uppercase") Financial Services
+                                        div(class="col-md-3 text-center industry-card")
                                             div(class="img-hover-zoom")
                                                 img(src="/images/industries/physical-traders.jpg" class="img-fluid")
-                                        div(class="col-md-3 text-center")
+                                                span(class="text-uppercase") Physical Traders
+                                        div(class="col-md-3 text-center industry-card")
                                             div(class="img-hover-zoom")
                                                 img(src="/images/industries/sources-and-procurement.jpg" class="img-fluid")
-                                        div(class="col-md-3 text-center")
+                                                span(class="text-uppercase") Sourcing and Procurement
+                                        div(class="col-md-3 text-center industry-card")
                                             div(class="img-hover-zoom")
                                                 img(src="/images/industries/consulting.jpg" class="img-fluid")
+                                                span(class="text-uppercase") Consulting
 
                         <!-- Research -->
                         li(class="nav-item")
@@ -110,11 +114,14 @@ html(lang="en")
                         li(class="nav-item")
                             a(class="nav-link" href="#") About
                     
-                    a(class="nav-link" href="#")
-                        button(type="button" class="btn btn-outline-light btn-outline") Log in
-                   
-                    a(class="nav-link" href="#")
-                        button(type="button" class="btn btn-secondary btn-filled") Sign up
+                    ul(class="nav navbar-nav navbar-btn")
+                        li(class="nav-item")
+                            a(href="#")
+                                button(type="button" class="btn btn-login") Log in
+                        
+                        li(class="nav-item")
+                            a(href="#")
+                                button(type="button" class="btn btn-signup") Sign up
         
         div(class="container")
             block content
