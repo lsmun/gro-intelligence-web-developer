@@ -4,6 +4,7 @@
   font-weight: 500;
   src: local('Roboto Medium'), local('Roboto-Medium'), url(http://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fBBc9.ttf) format('truetype');
 }
+/* Navbar */
 .nav .nav-item {
   padding: 15px;
   /*.btn-outline {
@@ -24,8 +25,44 @@
   padding-left: 30px;
   padding-right: 30px;
 }
+/* Image hover zoom */
+.img-hover-zoom {
+  overflow: hidden;
+  border-radius: 10px;
+  /* Nav specific */
+}
+.img-hover-zoom img {
+  transition: 0.5s ease-in-out;
+  transform-origin: center center;
+}
+.img-hover-zoom:hover img {
+  opacity: 75%;
+  transform: scale(1.3);
+}
+.dropdown-menu .img-hover-zoom {
+  height: 145px;
+}
+.dropdown-menu .img-hover-zoom img {
+  min-height: 145px;
+}
+.arrow-up:after {
+  content: "";
+  bottom: -17px;
+  left: calc(50% - 12px);
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: solid 12px transparent;
+  border-bottom-color: #fff;
+}
+.dropdown a {
+  position: relative;
+}
 body {
   background-color: darkslategray;
+}
+.navbar {
+  padding: 0px;
 }
 .dropdown {
   position: static;
@@ -34,7 +71,4 @@ body {
   border: none;
   border-radius: 0;
   width: 100%;
-}
-.navbar {
-  padding: 0;
 }

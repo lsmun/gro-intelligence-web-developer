@@ -26,12 +26,12 @@ html(lang="en")
                 <!-- Collapsible content -->
                 div(class="collapse navbar-collapse" id="navbarCollapse")
 
-                     <!-- Links -->
+                    <!-- Links -->
                     ul(class="nav navbar-nav ml-auto")
 
                         <!-- Products -->
                         li(class="nav-item dropdown")
-                            a(href="#" class="nav-link" id="productDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Products
+                            a(href="#" class="nav-link" id="productDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Product
                             div(class="dropdown-menu v-2 z-depth-1 special-color py-5 px-3" aria-labelledby="productDropdown")
                                 div(class="container")    
                                     div(class="row")
@@ -50,18 +50,19 @@ html(lang="en")
                                             img(src="/images/products/gro-analytics.png" class="img-fluid")
                                             h4 Gro analytics
                                             p Gain a competitive edge by using Gro’s proprietary machine-learning algorithms and predictive models
-                                            p
-                                                span(class="font-weight-bold") US Corn 
-                                                a(href="#") Yield Forecast 
-                                                    span(class="icon-chevron-right1")
-                                            p
-                                                span(class="font-weight-bold") US Soy 
-                                                a(href="#") Yield Forecast 
-                                                    span(class="icon-chevron-right1")
-                                            p
-                                                span(class="font-weight-bold") Argentina Soy 
-                                                a(href="#") Yield Forecast 
-                                                    span(class="icon-chevron-right1")
+                                            ul(class="list-unstyled")
+                                                li
+                                                    span(class="font-weight-bold") US Corn 
+                                                    a(href="#") Yield Forecast 
+                                                        span(class="icon-chevron-right1")
+                                                li
+                                                    span(class="font-weight-bold") US Soy 
+                                                    a(href="#") Yield Forecast 
+                                                        span(class="icon-chevron-right1")
+                                                li
+                                                    span(class="font-weight-bold") Argentina Soy 
+                                                    a(href="#") Yield Forecast 
+                                                        span(class="icon-chevron-right1")
                                             a(href="#")
                                                 button(type="button" class="btn btn-outline-dark btn-outline") Learn more 
                                                     span(class="icon-chevron-right1")
@@ -90,6 +91,18 @@ html(lang="en")
                             div(class="dropdown-menu v-2 z-depth-1 special-color py-5 px-3" aria-labelledby="industriesDropdown")
                                 div(class="container")    
                                     div(class="row")
+                                        div(class="col-md-3 text-center")
+                                            div(class="img-hover-zoom")
+                                                img(src="/images/industries/financial-services.jpg" class="img-fluid")
+                                        div(class="col-md-3 text-center")
+                                            div(class="img-hover-zoom")
+                                                img(src="/images/industries/physical-traders.jpg" class="img-fluid")
+                                        div(class="col-md-3 text-center")
+                                            div(class="img-hover-zoom")
+                                                img(src="/images/industries/sources-and-procurement.jpg" class="img-fluid")
+                                        div(class="col-md-3 text-center")
+                                            div(class="img-hover-zoom")
+                                                img(src="/images/industries/consulting.jpg" class="img-fluid")
 
                         <!-- Research -->
                         li(class="nav-item")
@@ -108,4 +121,5 @@ html(lang="en")
 
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
         script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")
+        script(src="/js/jquery.hoverIntent.min.js")
         script(src="/js/main.js")

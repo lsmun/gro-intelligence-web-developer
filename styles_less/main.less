@@ -1,5 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:500);
 
+
+
+/* Navbar */
 .nav {
     .nav-item {
         padding: 15px;
@@ -28,8 +31,55 @@
         }
 }
 
+/* Image hover zoom */
+.img-hover-zoom {
+    overflow: hidden;
+    border-radius: 10px;
+
+    img {
+        transition: 0.5s ease-in-out;
+        transform-origin: center center;
+    }
+
+    &:hover{
+        img {
+            opacity: 75%;
+            transform: scale(1.3);
+        }
+    }
+
+    /* Nav specific */
+    .dropdown-menu & {
+        height: 145px;
+
+        img {
+            min-height: 145px;
+        }
+    }
+}
+
+.arrow-up:after {
+    content: "";
+    bottom: -17px;
+    left: calc(50% - 12px);
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: solid 12px transparent;
+    border-bottom-color: #fff;
+}
+
+.dropdown a {
+    position: relative;
+}
+
+
 body {
     background-color: darkslategray;
+}
+
+.navbar {
+    padding: 0px;
 }
 
 .dropdown {
@@ -40,8 +90,4 @@ body {
     border: none;
     border-radius: 0;
     width: 100%;
-}
-
-.navbar {
-    padding: 0;
 }
