@@ -32,7 +32,7 @@ html(lang="en")
                         <!-- Products -->
                         li(class="nav-item dropdown")
                             a(href="#" class="nav-link" id="productsDropdown" data-toggle="dropdown-menu" aria-haspopup="true" aria-expanded="false") Products
-                            div(class="dropdown-menu" id="productsMenu" aria-labelledby="productsDropdown")
+                            div(class="dropdown-menu show" id="productsMenu" aria-labelledby="productsDropdown")
                                 div(class="container")    
                                     div(class="row")
 
@@ -95,22 +95,26 @@ html(lang="en")
                                             div(class="img-hover-zoom")
                                                 a(href="#")
                                                     img(src="/images/industries/financial-services.jpg" class="img-fluid")
-                                                    span(class="text-uppercase") Financial Services
+                                                    div(class="industry-card-title")
+                                                        span(class="text-uppercase") Financial Services
                                         div(class="col-md-3 text-center industry-card")
                                             div(class="img-hover-zoom")
                                                 a(href="#")
                                                     img(src="/images/industries/physical-traders.jpg" class="img-fluid")
-                                                    span(class="text-uppercase") Physical Traders
+                                                    div(class="industry-card-title")    
+                                                        span(class="text-uppercase") Physical Traders
                                         div(class="col-md-3 text-center industry-card")
                                             div(class="img-hover-zoom")
                                                 a(href="#")
                                                     img(src="/images/industries/sources-and-procurement.jpg" class="img-fluid")
-                                                    span(class="text-uppercase") Sourcing and Procurement
+                                                    div(class="industry-card-title")
+                                                        span(class="text-uppercase") Sourcing and Procurement
                                         div(class="col-md-3 text-center industry-card")
                                             div(class="img-hover-zoom")
                                                 a(href="#")
                                                     img(src="/images/industries/consulting.jpg" class="img-fluid")
-                                                    span(class="text-uppercase") Consulting
+                                                    div(class="industry-card-title")
+                                                        span(class="text-uppercase") Consulting
 
                         <!-- Research -->
                         li(class="nav-item")
@@ -131,6 +135,6 @@ html(lang="en")
             block content
 
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
-        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js")
         script(src="/js/jquery.hoverIntent.min.js")
-        script(src="/js/main.js")
+        //script(src="/js/main.js")
