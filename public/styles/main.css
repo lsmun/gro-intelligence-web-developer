@@ -7,6 +7,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
+  background-color: #333336;
 }
 body h3 {
   font-size: 20px;
@@ -15,12 +16,29 @@ body h3 {
 }
 /* Navbar */
 .navbar {
-  min-height: 82px;
   background-color: #333336;
+  /* Navbar toggler for mobile */
+  /* Logo */
+  /* Navbar links */
+  /* Dropdown */
+  /* Adjust padding for signup button */
+}
+@media (min-width: 992px) {
+  .navbar {
+    padding: 0px;
+  }
+}
+.navbar .navbar-toggler {
+  border-color: #ffffff;
+  color: #ffffff;
+  height: 40px;
 }
 .navbar .navbar-brand > img {
   width: 40px;
   height: 40px;
+}
+.navbar .nav-item {
+  /* Log in and Sign up buttons */
 }
 @media (min-width: 992px) {
   .navbar .nav-item {
@@ -31,8 +49,10 @@ body h3 {
   font-size: 14px;
   color: #ffffff;
 }
+.navbar .nav-item .nav-link:hover {
+  color: #bebebe;
+}
 .navbar .nav-item > a {
-  /* Log in and Sign up buttons */
   /* Arrow for dropdown menus */
 }
 .navbar .nav-item > a > button {
@@ -58,16 +78,33 @@ body h3 {
 }
 .navbar .nav-item > a.arrow-up:after {
   content: "";
-  bottom: -24px;
+  bottom: -27px;
   left: calc(50% - 12px);
   position: absolute;
   width: 0;
   height: 0;
   border: solid 12px transparent;
-  border-bottom-color: #fff;
+  border-bottom-color: #ffffff;
+}
+.navbar .dropdown {
+  position: static;
+}
+.navbar .dropdown > a {
+  position: relative;
+}
+.navbar .dropdown > .dropdown-menu {
+  border: none;
+  border-radius: 0;
+  width: 100%;
 }
 .navbar .navbar-btn > .nav-item:last-child {
   padding-right: 0;
+}
+/* Make the navbar taller to match wireframe only in desktop mode */
+@media (min-width: 992px) {
+  #navbar {
+    min-height: 82px;
+  }
 }
 /* Products dropdown menu */
 #productsMenu {
@@ -75,7 +112,11 @@ body h3 {
 }
 #productsMenu .product-card {
   padding: 0 50px;
+  /* Divider */
   border-right: solid 1px #eeeef1;
+  /* Card image */
+  /* Card paragraph */
+  /* Learn more button */
 }
 #productsMenu .product-card:last-child {
   border-right: none;
@@ -112,9 +153,14 @@ body h3 {
 #productsMenu .product-card > ul > li > a {
   font-weight: 500;
   color: #AAAAAD;
+  text-decoration: none;
+}
+#productsMenu .product-card > ul > li > a:hover {
+  color: #dadada;
 }
 #productsMenu .product-card > ul > li > a > span {
   padding-left: 5px;
+  font-size: 15px;
 }
 /* Industries dropdown menu */
 #industriesMenu {
@@ -126,7 +172,7 @@ body h3 {
 #industriesMenu .img-hover-zoom {
   height: 145px;
 }
-#industriesMenu .img-hover-zoom > span {
+#industriesMenu .img-hover-zoom span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -140,7 +186,7 @@ body h3 {
   width: max-content;
   padding: 8px 18px;
 }
-#industriesMenu .img-hover-zoom > img {
+#industriesMenu .img-hover-zoom img {
   min-height: 145px;
 }
 /* Image hover zoom */
@@ -155,21 +201,4 @@ body h3 {
 .img-hover-zoom:hover img {
   opacity: 75%;
   transform: scale(1.3);
-}
-.dropdown a {
-  position: relative;
-}
-body {
-  background-color: darkslategray;
-}
-.navbar {
-  padding: 0px;
-}
-.dropdown {
-  position: static;
-}
-.dropdown-menu {
-  border: none;
-  border-radius: 0;
-  width: 100%;
 }

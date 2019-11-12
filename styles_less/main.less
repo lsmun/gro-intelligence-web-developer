@@ -1,17 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:500);
-
-@primary-font: 'Roboto', sans-serif;
-
-@navbar-bg-color: #333336;
-
-@nav-link-color: #ffffff;
-@nav-link-color-rgb: 255,255,255;
-
-@h3-color: #555558;
+@import "variables.less";
 
 body {
     font-family: @primary-font;
     font-weight: 500;
+    background-color: @navbar-bgcolor;
 
     h3 {
         font-size: 20px;
@@ -22,27 +15,42 @@ body {
 
 /* Navbar */
 .navbar {
-    min-height: 82px;
-    background-color: @navbar-bg-color;
+    background-color: @navbar-bgcolor;
 
+    @media (min-width: 992px) {
+        padding: 0px;
+    }
+
+    /* Navbar toggler for mobile */
+    .navbar-toggler {
+        border-color: @nav-link-color;
+        color: @nav-link-color;
+        height: 40px;
+    }
+
+    /* Logo */
     .navbar-brand > img {
         width: 40px;
         height: 40px;
     }
 
+    /* Navbar links */
     .nav-item {
         @media (min-width: 992px) {
             padding: 20px;
         }
-
+        
         .nav-link {
             font-size: 14px;
             color: @nav-link-color;
+
+            &:hover {
+                color: @nav-link-color-hover;
+            }
         }
 
+        /* Log in and Sign up buttons */
         > a {
-
-            /* Log in and Sign up buttons */
             > button {
                 font-size: 14px;
                 color: @nav-link-color;
@@ -51,42 +59,55 @@ body {
                 border-radius: 50px;
     
                 &.btn-login {
-                    border: 1px solid @nav-link-color;
-        
-                    &:hover {
-                        color: @navbar-bg-color;
-                        background-color: @nav-link-color;
-                    }
+                    .nav-btn-login-style();
                 }
                 
                 &.btn-signup {
-                    color: @nav-link-color;
-                    background-color: rgba(@nav-link-color-rgb,.5);
-        
-                    &:hover {
-                        background-color: rgba(@nav-link-color-rgb,.7)
-                    }
+                    .nav-btn-signup-style();
                 }
             }
 
             /* Arrow for dropdown menus */
             &.arrow-up:after {
                 content: "";
-                bottom: -24px;
+                bottom: -27px;
                 left: calc(50% - 12px);
                 position: absolute;
                 width: 0;
                 height: 0;
                 border: solid 12px transparent;
-                border-bottom-color: #fff;
+                border-bottom-color: @nav-dropdown-color;
             }
         }
     }
 
+    /* Dropdown */
+    .dropdown {
+        position: static;
+    
+        > a {
+            position: relative;
+        }
+    
+        > .dropdown-menu {
+            border: none;
+            border-radius: 0;
+            width: 100%;
+        }
+    }
+
+    /* Adjust padding for signup button */
     .navbar-btn {
         > .nav-item:last-child {
             padding-right: 0;
         }
+    }
+}
+
+/* Make the navbar taller to match wireframe only in desktop mode */
+#navbar {
+    @media (min-width: 992px) {
+        min-height: 82px;
     }
 }
 
@@ -96,34 +117,39 @@ body {
 
     .product-card {
         padding: 0 50px;
-        border-right: solid 1px #eeeef1;
+
+        /* Divider */
+        border-right: solid 1px @product-divider-color;
 
         &:last-child {
             border-right: none;
         }
 
+        /* Card image */
         > img {
             width: 75px;
             height: 75px;
         }
 
+        /* Card paragraph */
         > p {
-            color: #88888b;
+            color: @product-p-color;
             font-size: 12px;
             line-height: 20px;
         }
 
+        /* Learn more button */
         button {
             font-size: 11px;
             color: #666669;
             padding: 8px 20px;
             border-radius: 50px;
-            background-color: #eeeef1;
+            background-color: @product-btn-bgcolor;
             border: none;
     
             &:hover {
                 color: #ffffff;
-                background-color: #e31b37;
+                background-color: @product-btn-bgcolor-hover;
             }
         }
 
@@ -137,10 +163,16 @@ body {
 
                 > a {
                     font-weight: 500;
-                    color: #AAAAAD;
+                    color: @product-link-color;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: @product-link-color-hover;
+                    }
 
                     > span {
                         padding-left: 5px;
+                        font-size: 15px;
                     }
                 }
             }
@@ -159,22 +191,22 @@ body {
     .img-hover-zoom {
         height: 145px;
 
-        > span {
+        span {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             font-weight: 700;
             font-size: 12px;
-            color: @nav-link-color;
+            color: @industry-span-color;
             letter-spacing: 2.5px;
-            background-color: rgba(255,255,255,.25);
+            background-color: @industry-span-bgcolor;
             border-radius: 50px;
             width: max-content;
             padding: 8px 18px;
         }
 
-        > img {
+        img {
             min-height: 145px;
         }
     }
@@ -196,27 +228,4 @@ body {
             transform: scale(1.3);
         }
     }
-}
-
-.dropdown a {
-    position: relative;
-}
-
-
-body {
-    background-color: darkslategray;
-}
-
-.navbar {
-    padding: 0px;
-}
-
-.dropdown {
-    position: static;
-}
-
-.dropdown-menu {
-    border: none;
-    border-radius: 0;
-    width: 100%;
 }

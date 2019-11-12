@@ -21,7 +21,7 @@ html(lang="en")
                 
                 <!-- Collapse button -->
                 button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation")
-                    span(class="navbar-toggler-icon")
+                    span(class="icon-menu1")
             
                 <!-- Collapsible content -->
                 div(class="collapse navbar-collapse" id="navbar")
@@ -31,7 +31,7 @@ html(lang="en")
 
                         <!-- Products -->
                         li(class="nav-item dropdown")
-                            a(href="#" class="nav-link" id="productsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Products
+                            a(href="#" class="nav-link" id="productsDropdown" data-toggle="dropdown-menu" aria-haspopup="true" aria-expanded="false") Products
                             div(class="dropdown-menu" id="productsMenu" aria-labelledby="productsDropdown")
                                 div(class="container")    
                                     div(class="row")
@@ -87,26 +87,30 @@ html(lang="en")
                             
                         <!-- Industries -->
                         li(class="nav-item dropdown")
-                            a(href="#" class="nav-link" id="industriesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Industries
+                            a(href="#" class="nav-link" id="industriesDropdown" data-toggle="dropdown-menu" aria-haspopup="true" aria-expanded="false") Industries
                             div(class="dropdown-menu" id="industriesMenu" aria-labelledby="industriesDropdown")
                                 div(class="container")    
                                     div(class="row")
                                         div(class="col-md-3 text-center industry-card")
                                             div(class="img-hover-zoom")
-                                                img(src="/images/industries/financial-services.jpg" class="img-fluid")
-                                                span(class="text-uppercase") Financial Services
+                                                a(href="#")
+                                                    img(src="/images/industries/financial-services.jpg" class="img-fluid")
+                                                    span(class="text-uppercase") Financial Services
                                         div(class="col-md-3 text-center industry-card")
                                             div(class="img-hover-zoom")
-                                                img(src="/images/industries/physical-traders.jpg" class="img-fluid")
-                                                span(class="text-uppercase") Physical Traders
+                                                a(href="#")
+                                                    img(src="/images/industries/physical-traders.jpg" class="img-fluid")
+                                                    span(class="text-uppercase") Physical Traders
                                         div(class="col-md-3 text-center industry-card")
                                             div(class="img-hover-zoom")
-                                                img(src="/images/industries/sources-and-procurement.jpg" class="img-fluid")
-                                                span(class="text-uppercase") Sourcing and Procurement
+                                                a(href="#")
+                                                    img(src="/images/industries/sources-and-procurement.jpg" class="img-fluid")
+                                                    span(class="text-uppercase") Sourcing and Procurement
                                         div(class="col-md-3 text-center industry-card")
                                             div(class="img-hover-zoom")
-                                                img(src="/images/industries/consulting.jpg" class="img-fluid")
-                                                span(class="text-uppercase") Consulting
+                                                a(href="#")
+                                                    img(src="/images/industries/consulting.jpg" class="img-fluid")
+                                                    span(class="text-uppercase") Consulting
 
                         <!-- Research -->
                         li(class="nav-item")

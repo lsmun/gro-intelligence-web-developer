@@ -1,6 +1,6 @@
 $(document).ready(function() {
     'use strict';
-    $(".navbar .nav .dropdown").hoverIntent({
+    $(".dropdown").hoverIntent({
         over: function() {
             $(this).find('.nav-link').addClass('arrow-up');
             $(this).find(".dropdown-menu").toggle();
