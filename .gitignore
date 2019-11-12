@@ -1,11 +1,10 @@
 # Ignore Mac system files
 .DS_store
 
-# Ignore node_modules folder
+# Folders to ignore
 node_modules
-
-# Ignore mockups folder
 mockups
+data
 
-# Ignore package-lock
+# Files to ignore
 package-lock.json
