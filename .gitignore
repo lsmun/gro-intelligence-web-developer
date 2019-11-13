@@ -3,8 +3,6 @@
 
 # Folders to ignore
 node_modules
-mockups
-data
 
 # Files to ignore
 package-lock.json
